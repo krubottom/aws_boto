@@ -12,4 +12,4 @@ for zone in r53res['HostedZones']:
     for record in r53client.list_resource_record_sets(HostedZoneId=zone['Id'])['ResourceRecordSets']:
         if record['Name'] != zone['Name']:
             print record['Name'][:-1]
-    print "-----\n"
+    print "-"*30+"\n"
