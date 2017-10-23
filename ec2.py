@@ -17,4 +17,4 @@ def get_instance_name(ec2id):
 
 for res in ec2res['Reservations']:
     for instance in res['Instances']:
-        print get_instance_name(instance['InstanceId']) + " - " + instance['PublicIpAddress']
+        print get_instance_name(instance['InstanceId']) + " - " + instance['InstanceType'] + " - " + instance['PublicIpAddress']
